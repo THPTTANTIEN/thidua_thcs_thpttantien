@@ -2237,7 +2237,7 @@ def export_schedule(week):
             ws = wb.active
             ws.title = f"Tuan_{week}"
             
-            ws['A1'] = "ĐOÀN TRƯỜNG THPT THANH HÒA"
+            ws['A1'] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"
             ws['D1'] = "ĐOÀN TNCS HỒ CHÍ MINH"
             ws['A1'].font = Font(name="Times New Roman", size=11, bold=True)
             ws['D1'].font = Font(name="Times New Roman", size=11, bold=True)
@@ -3157,7 +3157,7 @@ def export_blacklist():
             ws = wb.active
             ws.title = f"So_Den_{week_name}"
             
-            ws['A1'] = "ĐOÀN TRƯỜNG THPT THANH HÒA"
+            ws['A1'] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"
             ws['A1'].font = Font(name="Times New Roman", size=11, bold=True)
             ws['A3'] = f"TRÍCH LỤC SỔ ĐEN (CÁ NHÂN VI PHẠM) - {week_name.upper()}"
             ws['A3'].font = Font(name="Times New Roman", size=14, bold=True)
@@ -4571,7 +4571,7 @@ def export_weekly_excel():
             font_header_color = Font(name="Times New Roman", size=11, bold=True, color="FFFFFF")
             thin_border = Border(left=Side(style='thin', color='000000'), right=Side(style='thin', color='000000'), top=Side(style='thin', color='000000'), bottom=Side(style='thin', color='000000'))
             
-            ws.merge_cells("A1:D1"); ws.cell(row=1, column=1, value="ĐOÀN TRƯỜNG THPT THANH HÒA").font = font_title; ws.cell(row=1, column=1).alignment = align_center
+            ws.merge_cells("A1:D1"); ws.cell(row=1, column=1, value="ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN").font = font_title; ws.cell(row=1, column=1).alignment = align_center
             ws.merge_cells("E1:G1"); ws.cell(row=1, column=5, value="ĐOÀN TNCS HỒ CHÍ MINH").font = font_title; ws.cell(row=1, column=5).alignment = align_center
             ws.merge_cells("A2:G2"); ws["A2"] = f"BẢNG TỔNG HỢP KẾT QUẢ THI ĐUA - {week_name.upper()}"; ws["A2"].font = font_main_header; ws["A2"].alignment = align_center
             
@@ -4692,7 +4692,7 @@ def export_monthly_excel():
             last_col_letter = get_column_letter(num_cols)
 
             ws.merge_cells("A1:C1")
-            ws["A1"] = "ĐOÀN TRƯỜNG THPT THANH HÒA"
+            ws["A1"] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"
             ws["A1"].font = font_title
             ws["A1"].alignment = align_center
 
@@ -4984,7 +4984,7 @@ def export_semester_excel():
             last_col_letter = get_column_letter(total_cols)
 
             ws.merge_cells('A1:C1')
-            ws['A1'] = "ĐOÀN TRƯỜNG THPT THANH HÒA"
+            ws['A1'] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"
             ws['A1'].font = font_bold
             ws['A1'].alignment = align_left
 
@@ -5232,7 +5232,7 @@ def export_yearly_excel():
             border_thin = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
             fill_header = PatternFill(start_color="FCE4D6", end_color="FCE4D6", fill_type="solid")
 
-            ws.merge_cells('A1:C1'); ws['A1'] = "ĐOÀN TRƯỜNG THPT THANH HÒA"; ws['A1'].font = font_bold; ws['A1'].alignment = align_left
+            ws.merge_cells('A1:C1'); ws['A1'] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"; ws['A1'].font = font_bold; ws['A1'].alignment = align_left
             ws.merge_cells('E1:G1'); ws['E1'] = "ĐOÀN TNCS HỒ CHÍ MINH"; ws['E1'].font = Font(name='Times New Roman', size=14, bold=True); ws['E1'].alignment = align_center
             ws.merge_cells('A3:G3'); ws['A3'] = f"TỔNG KẾT THI ĐUA NĂM HỌC - {selected_year_name.upper()}"; ws['A3'].font = font_title; ws['A3'].alignment = align_center
 
@@ -5740,7 +5740,7 @@ def export_templates_excel():
             ws['G1'].alignment = Alignment(horizontal='center')
 
             ws.merge_cells('B2:C2')
-            ws['B2'] = "BCH TRƯỜNG THPT THANH HÒA"
+            ws['B2'] = "BCH TRƯỜNG THCS & THPT TÂN TIẾN"
             ws['B2'].font = Font(name='Times New Roman', bold=True, size=11)
             ws['B2'].alignment = Alignment(horizontal='center')
 
@@ -6428,7 +6428,7 @@ def api_ai_weekly_report(week_name):
             }
             
             prompt = f"""
-            Bạn là một Chuyên gia Quản lý Giáo dục và Cố vấn Cấp cao cho Ban Giám hiệu trường THPT Thanh Hòa. Dựa trên dữ liệu tổng kết nề nếp của {week_name} dưới đây, hãy đưa ra bản phân tích mang tầm nhìn chiến lược, khách quan, sắc sảo và mang tính xây dựng cao:
+            Bạn là một Chuyên gia Quản lý Giáo dục và Cố vấn Cấp cao cho Ban Giám hiệu trường THCS & THPT TÂN TIẾN. Dựa trên dữ liệu tổng kết nề nếp của {week_name} dưới đây, hãy đưa ra bản phân tích mang tầm nhìn chiến lược, khách quan, sắc sảo và mang tính xây dựng cao:
             
             DỮ LIỆU THI ĐUA:
             - Tổng số lớp tham gia: {total_classes}
@@ -6689,7 +6689,7 @@ def export_global_blacklist():
             ws.title = "So_Den_Thong_Ke"
             
             ws.merge_cells('A1:F1')
-            ws['A1'] = "ĐOÀN TRƯỜNG THPT THANH HÒA"
+            ws['A1'] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"
             ws['A1'].font = Font(name="Times New Roman", size=11, bold=True)
             ws.merge_cells('A3:F3')
             ws['A3'] = "THỐNG KÊ DANH SÁCH SỔ ĐEN KỶ LUẬT"
@@ -8096,7 +8096,7 @@ def export_filtered_blacklist():
         ws.title = f"So_Den_{week_name}"
         
         ws.merge_cells('A1:E1')
-        ws['A1'] = "ĐOÀN TRƯỜNG THPT THANH HÒA"
+        ws['A1'] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"
         ws['A1'].font = Font(name="Times New Roman", size=11, bold=True)
         ws.merge_cells('A3:E3')
         ws['A3'] = f"DANH SÁCH SỔ ĐEN KỶ LUẬT - {week_name.upper()}"
@@ -8305,7 +8305,7 @@ def export_class_blacklist():
             ws.title = "So_Den_Cua_Lop"
             
             ws.merge_cells('A1:E1')
-            ws['A1'] = "ĐOÀN TRƯỜNG THPT THANH HÒA"
+            ws['A1'] = "ĐOÀN TRƯỜNG THCS & THPT TÂN TIẾN"
             ws['A1'].font = Font(name="Times New Roman", size=11, bold=True)
             
             ws.merge_cells('A3:E3')
